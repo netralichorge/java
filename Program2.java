@@ -6,7 +6,7 @@ class Program2
 		Scanner sc=new Scanner(System.in);
 		
 		System.out.println("Enter name:");
-		String name=sc.next();
+		String name=sc.next() ;
 		
 		System.out.println("Enter age:");
 		int n=sc.nextInt();

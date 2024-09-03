@@ -1,0 +1,14 @@
+class if_elseStatement
+{
+	public static void main(String args[])
+	{
+		if(false)
+		{
+			System.out.println("If block");
+		}
+		else
+		{
+			System.out.println("else block");
+		}
+	}
+}

@@ -1,12 +1,15 @@
 import java.util.Scanner;
-class Demo7
+class Demo10
 {
 	public static void main(String args[])
 	{
 		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
 		
-		String sentence=sc.nextLine();
+		if(n>0)
+		{
+			System.out.println("You have entered positive value");
+		}
 		
-		System.out.println(sentence);
 	}
 }

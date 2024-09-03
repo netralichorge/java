@@ -11,6 +11,6 @@ class Program2
 		System.out.println("Enter age:");
 		int n=sc.nextInt();
 		
-		System.out.println("My name is "+name+" and My age is "+n.);
+		System.out.println("My name is "+name+" and My age is "+n);
 	}
 }
