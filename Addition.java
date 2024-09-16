@@ -5,19 +5,19 @@ class Addition
 		int a=10;
 		int b=2;
 		
-		// Addition
+		// Addition : +
 		System.out.println("Addition is "+(a+b));
 		
-		// Substraction
+		// Substraction : -
 		System.out.println("Substraction is "+(a-b));
 		
-		// Multiplication
+		// Multiplication : *
 		System.out.println("Multiplication is "+(a*b));
 		
-		//Division
+		//Division : /
 		System.out.println("Division is "+(a/b));
 		
-		// Modulus
+		// Modulus : %
 		System.out.println("Modulus is "+(a%b));
 	}
 	

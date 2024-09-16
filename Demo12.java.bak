@@ -2,7 +2,7 @@ class Demo12
 {
 	public static void main(String args[])
 	{
-		int n=12;
+		int n=14;
 		
 		if(n%3==0)
 		{

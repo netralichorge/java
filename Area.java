@@ -7,7 +7,6 @@ class Area
 		
 		System.out.println("Area of rectangle is "+(l*b));
 		
-		
 		int side=8;
 		System.out.println("Area of square is "+(side*side));
 	}

@@ -1,0 +1,19 @@
+class Type_Casting
+{
+	public static void main(String args[])
+	{
+		// Widening Typecasting
+		
+		int a=10;
+		long b=a;
+		
+		System.out.println(b);
+	
+	// Narrowing TypeCasting
+	
+	int c=100;
+	byte d=(byte) c; // int to byte conversion
+	
+	System.out.println(d);
+	}
+}
