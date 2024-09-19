@@ -4,6 +4,9 @@ class Demo20
 	{
 		int a[][]={{1,3,5},{3,5,8}};
 		
+		//1 3 5
+		//3 5 8
+		
 		for(int n[]:a)
 		{
 			for(int i:n)
