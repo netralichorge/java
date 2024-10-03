@@ -3,7 +3,7 @@ package abstraction;
 abstract class Electronics
 {
 	abstract void start();
-	abstract void stop();			// method without implimentation is called abstact method
+	abstract void stop();			// method without implimentation is called abstaction.
 }
 
 class TV extends Electronics
