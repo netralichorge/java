@@ -18,9 +18,7 @@ public class Example3 {
 		else
 			System.out.println("Login Failed");
 		
-		
-		
-		
+			
 	}
 
 }
