@@ -4,7 +4,7 @@ public class ECP1 {
 
 	public static void main(String[] args) {
 		
-		Student s1 = new Student();
+		Student s1 = new Student(0, null, 0);
 		
 		s1.setId(101);
 		// System.out.println(s1.getId());
