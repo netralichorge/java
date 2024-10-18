@@ -1,5 +1,6 @@
 package learncollection;
 
+//public class Product implements Comparable<Product>
 public class Product {
 	
 	private int id;
@@ -52,6 +53,22 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
 	}
+	
+	/*
+    @Override
+	public int compareTo(Product o) {   //compareTo method is used for compare to objects
+		// TODO Auto-generated method stub
+		//return this.price - o.price;  // for descending order list reverse the return statement (o.price - this.price)
+	
+		// for name wise comaparision
+		
+		return this.name.compareTo(o.name);
+	
+	}
+	*/
+	
+	
+	
 	
 	
 	
