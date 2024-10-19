@@ -30,6 +30,8 @@ public class ListExample7 {
 		
 		Collections.sort(products,priceComparator);
 		System.out.println(products);
+		
+		
 
 	}
 
