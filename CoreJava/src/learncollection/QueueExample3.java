@@ -18,6 +18,8 @@ public class QueueExample3 {
 		list.addFirst(12);  // addfirst method add element on first
 		System.out.println(list);
 		
+		System.out.println("-----------------------");
+		
 		list.removeFirst();
 		System.out.println(list);
 		
@@ -25,6 +27,8 @@ public class QueueExample3 {
 		
 		list.removeLast();
 		System.out.println(list);
+		
+		System.out.println("--------------------");
 		
 		System.out.println(list.getFirst());
 		System.out.println(list.getLast());
