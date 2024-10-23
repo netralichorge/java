@@ -32,7 +32,6 @@ public class ListExample7 {
 		System.out.println(products);
 		
 		
-
 	}
 
 }
