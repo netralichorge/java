@@ -76,9 +76,7 @@ public class MapExample4 {
 		
 		System.out.println(map.pollLastEntry());  // remove last entry
 		
-		
-		
-		
+
 
 	}
 
