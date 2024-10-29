@@ -2,7 +2,7 @@ package ExceptionHandlling;
 
 public class Example8 {
 	
-	//throw keyword used for show exception
+	//throw keyword used for throw exception
 	
 	public static void throwException()
 	{
