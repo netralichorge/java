@@ -1,4 +1,4 @@
-package com.learn.practice;
+package com.learn.demo;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,15 +7,15 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
 	
 	@Bean
-	public Product p1()
+	public Student s1()
 	{
-		return new Product(10,"Mobile",35000);
+		return new Student(101,"Raj",19);
 	}
 	
 	@Bean
-	public Customer c1()
+	public Teacher t1()
 	{
-		return new Customer(101,"Riya",null);
+		return new Teacher(12,"Mrs.Dalvi","Physics");
 	}
-
+	
 }
