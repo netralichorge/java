@@ -3,10 +3,13 @@ package com.learn.springboot1.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.learn.springboot1.entity.Student;
@@ -47,6 +50,16 @@ public class FirstController {
 		return student;
 	}
 	
+	@GetMapping("/get-all-students")
+	public ResponseEntity<List<Student>> getAllStudents()
+	{
+		ArrayList<Student> students = new ArrayList<Student>();
+		students.add(new Student(101, "Nisha", 60));
+		students.add(new Student(102, "Janki", 80));
+		return new ResponseEntity<List<Student>>(students,HttpStatus.FOUND);
+		
+	}
+	
 	
 	// for multiple id
 	 //        ("/students/100")
@@ -65,5 +78,13 @@ public class FirstController {
 		System.out.println(student);
 		return student;
 	}
+	
+	// ResponseEntity<List<Student>>  HttpStatus.CREATED  [enum.]
+	@PostMapping("/add-student")
+	public ResponseEntity<Student> addStudentWithResponseEntity(@RequestBody Student student)
+	{
+		return new ResponseEntity<Student>(student,HttpStatus.CREATED);
+	}
+	
 }
 
