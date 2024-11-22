@@ -39,8 +39,10 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDto getuserById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		User user = userRepository.findById(id)
+		.orElseThrow(()->new RuntimeException(id+"Not found"));
+		return entityToDto(user);
 	}
 
 	@Override
