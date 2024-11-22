@@ -60,8 +60,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public String deleteUser(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		User user = userRepository.findById(id)
+		.orElseThrow(()->new RuntimeException(id+ "Not Found"));
+		
+		userRepository.delete(user);
+		return user.getId()+"deleted successfully";
 	}
 
 	@Override
