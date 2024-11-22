@@ -2,6 +2,7 @@ package com.learn.Ecommerce.service;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,8 +34,14 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<UserDto> getAllUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		
+	    List<User> users = userRepository.findAll();
+	    
+	    List<UserDto> userDtoList = users.stream()
+	    .map(u->entityToDto(u))
+	    .collect(Collectors.toList());
+	    
+		return userDtoList;
 	}
 
 	@Override
