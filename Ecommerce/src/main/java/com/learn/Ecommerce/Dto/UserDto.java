@@ -1,5 +1,7 @@
 package com.learn.Ecommerce.Dto;
 
+import com.learn.Ecommerce.validators.PasswordMatch;
+
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -15,9 +17,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@PasswordMatch
 public class UserDto {
 	
-	// id is autogenerate so we can not apply any anotation on id
+	// id is auto generate so we can not apply any annotation on id
 	private String id;
 	
 	@NotNull
