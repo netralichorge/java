@@ -59,6 +59,16 @@ public class UserServiceImpl implements UserService {
 		.orElseThrow(()->new RuntimeException(email+"Not found"));
 		return entityToDto(user);
 	}
+	
+	@Override
+	public List<UserDto> getUserByFirstName(String firstname) {
+		
+		List<UserDto> userDtoList = userRepository.findByFirstname(firstname).stream()
+		.map(u->entityToDto(u))
+		.collect(Collectors.toList());
+		 
+		 return userDtoList;
+	}
 
 	@Override
 	public UserDto updateUser(String id, UserDto userDto) {

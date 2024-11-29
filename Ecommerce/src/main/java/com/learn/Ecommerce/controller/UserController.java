@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.learn.Ecommerce.Dto.UserDto;
@@ -58,6 +59,14 @@ public class UserController {
 	{
 		List<UserDto> users = userService.getAllUsers();
 		return new ResponseEntity<List<UserDto>>(users,HttpStatus.OK);
+	}
+	
+	//To fetch users by first name
+	@GetMapping("find-by-firstname")
+	
+	public ResponseEntity<List<UserDto>> getUsersByFirstName(@RequestParam String fname)
+	{
+		return new ResponseEntity<List<UserDto>>(userService.getUserByFirstName(fname),HttpStatus.FOUND);
 	}
 	
 	// DELETE ["/users/{id}"]
