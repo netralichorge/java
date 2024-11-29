@@ -16,6 +16,9 @@ public interface UserService {
 	// To fetch user by id
 	UserDto getuserById(String id);
 	
+	// To fetch user by emailId
+	UserDto getUserByEmail(String email);
+	
 	// update user by Id
 	UserDto updateUser(String id,UserDto userDto);
 	
@@ -27,6 +30,10 @@ public interface UserService {
 	
 	//DTO to entity conversion
 	User dtoToEntity(UserDto userDto);
+
+	
+
+	
 	
 
 }

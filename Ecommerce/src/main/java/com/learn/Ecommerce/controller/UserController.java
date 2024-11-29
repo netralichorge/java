@@ -42,6 +42,15 @@ public class UserController {
 		return new ResponseEntity<UserDto>(userDto,HttpStatus.FOUND);
 	}
 	
+	// GET["/users/user23@gmail.com"]  To fetch by emailId
+	
+	@GetMapping("find-by-email/{emailId}")
+	public ResponseEntity<UserDto> getUserByEmailId(@PathVariable String emailId)
+	{
+		//UserDto userDto = userService.getUserByEmail(emailId);
+		return new ResponseEntity<UserDto>(userService.getUserByEmail(emailId),HttpStatus.FOUND);
+	}
+	
 	//GET ["/users"] To fetch all users
 	
 	@GetMapping

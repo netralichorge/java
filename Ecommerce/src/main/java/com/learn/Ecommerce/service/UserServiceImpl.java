@@ -51,6 +51,14 @@ public class UserServiceImpl implements UserService {
 		.orElseThrow(()->new RuntimeException(id+"Not found"));
 		return entityToDto(user);
 	}
+	
+	@Override
+	public UserDto getUserByEmail(String email) {
+		
+		User user = userRepository.findByEmailId(email)
+		.orElseThrow(()->new RuntimeException(email+"Not found"));
+		return entityToDto(user);
+	}
 
 	@Override
 	public UserDto updateUser(String id, UserDto userDto) {
