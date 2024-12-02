@@ -1,5 +1,6 @@
 package com.learn.Ecommerce.Dto;
 
+import com.learn.Ecommerce.entity.Address;
 import com.learn.Ecommerce.validators.PasswordMatch;
 
 import jakarta.validation.constraints.Max;
@@ -11,7 +12,7 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+//user Dto is a copy of user
 //DTO - Data Transfer Objects
 
 @Data
@@ -51,6 +52,8 @@ public class UserDto {
 	@Min(13)
 	@Max(150)
 	private int age;
+	
+	private Address address;
 	
 
 }
