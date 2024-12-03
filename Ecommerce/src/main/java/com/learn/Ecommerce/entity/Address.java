@@ -1,5 +1,7 @@
 package com.learn.Ecommerce.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.annotation.Generated;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -38,6 +40,7 @@ public class Address {
 	private int pincode;
 	
 	//foreign key
+	@JsonBackReference
 	@OneToOne(cascade = CascadeType.ALL,mappedBy = "address")
 	private User user;
 

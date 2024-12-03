@@ -1,5 +1,7 @@
 package com.learn.Ecommerce.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,6 +35,8 @@ public class User {
 	@Column(nullable = false)
 	private int age;
 	
+	
+	@JsonManagedReference
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 
