@@ -20,7 +20,7 @@ import com.learn.Ecommerce.service.UserService;
 
 import jakarta.validation.Valid;
 
-@RestController
+@RestController // data show in json form
 @RequestMapping("/users")
 public class UserController {
 	@Autowired
