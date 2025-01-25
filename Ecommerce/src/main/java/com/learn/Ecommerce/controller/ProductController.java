@@ -7,13 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.learn.Ecommerce.entity.Product;
 import com.learn.Ecommerce.repository.ProductRepository;
 import com.learn.Ecommerce.service.FileService;
-
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.io.InputStream;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +18,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.util.StreamUtils;
 
 
 @RestController // to make class as a controller
+@CrossOrigin
 public class ProductController {
 	
 	@Value("${product.image.path}")
