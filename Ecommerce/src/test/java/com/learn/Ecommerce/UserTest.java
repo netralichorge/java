@@ -5,6 +5,11 @@ import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+
 import com.learn.Ecommerce.entity.User;
 import com.learn.Ecommerce.repository.UserRepository;
 
@@ -13,6 +18,25 @@ public class UserTest {
 	
 	@MockBean // it can not working on real database.
 	private UserRepository userRepository;
+	
+	private User user;
+	
+	@BeforeEach 
+	public void setUp() // before each method this method will be executed
+	{
+		user = new User();
+		user.setId("U1234");
+		user.setFirstname("Nisha");
+		user.setLastName("Sharma");
+		user.setPassword("Nisha@123");
+		user.setEmailId("nisha@itvedant.com");
+		user.setAge(24);
+		
+		Optional<User> optionalUser = Optional.of(user);
+		
+		Mockito.when(userRepository.findById("U1234")).thenReturn(optionalUser);
+		
+	}
 	
 	@Test
 	public void testCreateUser()
@@ -31,6 +55,14 @@ public class UserTest {
 		assertNotNull(savedUser);
 		assertEquals("Nisha", savedUser.getFirstname());
 		
+	}
+	
+	@Test
+	public void testGetUserById()
+	{
+		User fetchedUser = userRepository.findById("U1234").get();
+		String email="nisha@itvedant.com";
+		assertEquals(email, fetchedUser.getEmailId());
 	}
 	
 
