@@ -15,7 +15,7 @@ public class CategoryTest {
 	@MockBean
 	private CategoryRepository categoryRepository;
 	
-	
+
 	@Test
 	public void testCreateCategory()
 	{

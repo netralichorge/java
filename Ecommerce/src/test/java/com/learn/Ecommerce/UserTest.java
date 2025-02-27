@@ -65,5 +65,26 @@ public class UserTest {
 		assertEquals(email, fetchedUser.getEmailId());
 	}
 	
-
+	@Test
+	public void testUpdateUser()
+	{
+		user.setLastName("Gupta");
+		Mockito.when(userRepository.save(user)).thenReturn(user);
+		User updatedUser = userRepository.save(user);
+		
+		assertEquals("Gupta",updatedUser.getLastName());
+	}
+	
+	@Test
+	public void testDeleteUser()
+	{
+		userRepository.deleteById("U1234");
+		
+		Mockito.verify(userRepository).deleteById("U1234");
+		
+		Mockito.when(userRepository.existsById("U1234")).thenReturn(false);
+		assertFalse(userRepository.existsById("U1234"));
+		
+		
+	}
 }
